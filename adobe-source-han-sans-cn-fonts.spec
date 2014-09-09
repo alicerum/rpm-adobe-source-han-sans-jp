@@ -5,7 +5,7 @@
 
 Name:           adobe-source-han-sans-cn-fonts
 Version:        1.000
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Adobe OpenType Pan-CJK font family for Simplified Chinese
 
 License:        ASL 2.0
@@ -60,6 +60,9 @@ ln -s %{_fontconfig_templatedir}/%{fontconf} \
 
 
 %changelog
+* Tue Sep  9 2014 Peng Wu <pwu@redhat.com> - 1.000-4
+- Work around monospace English characters issue
+
 * Mon Aug  4 2014 Peng Wu <pwu@redhat.com> - 1.000-3
 - Fontconfig changes from user feed back
 
