@@ -12,7 +12,7 @@ License:        ASL 2.0
 URL:            https://github.com/adobe-fonts/source-han-sans/
 Source0:        https://github.com/adobe-fonts/source-han-sans/raw/release/SubsetOTF/%{archivename}.zip
 Source1:        %{name}-fontconfig.conf
-Source2:        http://downloads.sourceforge.net/source-han-sans.adobe/LICENSE.txt
+Source2:        https://raw.githubusercontent.com/adobe-fonts/source-han-sans/master/LICENSE.txt
 
 BuildArch:      noarch
 BuildRequires:  fontpackages-devel
@@ -56,7 +56,7 @@ ln -s %{_fontconfig_templatedir}/%{fontconf} \
 
 %_font_pkg -f %{fontconf} *.otf
 
-%doc LICENSE.txt
+%license LICENSE.txt
 
 
 %changelog
