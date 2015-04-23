@@ -1,21 +1,18 @@
 %global fontname adobe-source-han-sans-cn
 %global fontconf 65-0-%{fontname}.conf
 
-%global archivename SourceHanSansCN-%{version}
+%global archivename SourceHanSansCN
 
 Name:           adobe-source-han-sans-cn-fonts
-Version:        1.001
+Version:        1.002
 Release:        1%{?dist}
 Summary:        Adobe OpenType Pan-CJK font family for Simplified Chinese
 
 License:        ASL 2.0
 URL:            https://github.com/adobe-fonts/source-han-sans/
-# the original upstream tar ball is too large, use the download script instead
-Source0:        %{archivename}.zip
+Source0:        https://github.com/adobe-fonts/source-han-sans/raw/release/SubsetOTF/%{archivename}.zip
 Source1:        %{name}-fontconfig.conf
 Source2:        http://downloads.sourceforge.net/source-han-sans.adobe/LICENSE.txt
-# the script to download fonts
-Source3:        fetchcnfont.sh
 
 BuildArch:      noarch
 BuildRequires:  fontpackages-devel
@@ -63,6 +60,9 @@ ln -s %{_fontconfig_templatedir}/%{fontconf} \
 
 
 %changelog
+* Thu Apr 23 2015 Peng Wu <pwu@redhat.com> - 1.002-1
+- Update to 1.002
+
 * Wed Oct  8 2014 Peng Wu <pwu@redhat.com> - 1.001-1
 - Update to 1.001
 
