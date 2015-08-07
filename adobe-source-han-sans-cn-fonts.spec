@@ -8,7 +8,7 @@ Version:        1.002
 Release:        2%{?dist}
 Summary:        Adobe OpenType Pan-CJK font family for Simplified Chinese
 
-License:        ASL 2.0
+License:        OFL
 URL:            https://github.com/adobe-fonts/source-han-sans/
 Source0:        https://github.com/adobe-fonts/source-han-sans/raw/release/SubsetOTF/%{archivename}.zip
 Source1:        %{name}-fontconfig.conf
