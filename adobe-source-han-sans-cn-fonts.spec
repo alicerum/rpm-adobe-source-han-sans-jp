@@ -4,15 +4,14 @@
 %global archivename SourceHanSansCN
 
 Name:           adobe-source-han-sans-cn-fonts
-Version:        1.002
-Release:        2%{?dist}
+Version:        1.004
+Release:        1%{?dist}
 Summary:        Adobe OpenType Pan-CJK font family for Simplified Chinese
 
 License:        OFL
 URL:            https://github.com/adobe-fonts/source-han-sans/
 Source0:        https://github.com/adobe-fonts/source-han-sans/raw/release/SubsetOTF/%{archivename}.zip
 Source1:        %{name}-fontconfig.conf
-Source2:        https://raw.githubusercontent.com/adobe-fonts/source-han-sans/master/LICENSE.txt
 
 BuildArch:      noarch
 BuildRequires:  fontpackages-devel
@@ -39,9 +38,6 @@ Japanese, and Korean.
 
 %install
 
-#install doc
-install -m 0644 -p %{SOURCE2} .
-
 install -m 0755 -d %{buildroot}%{_fontdir}
 install -m 0644 -p *.otf %{buildroot}%{_fontdir}
 
@@ -60,6 +56,9 @@ ln -s %{_fontconfig_templatedir}/%{fontconf} \
 
 
 %changelog
+* Fri Aug  7 2015 Peng Wu <pwu@redhat.com> - 1.004-1
+- Update to 1.004
+
 * Tue Jun 16 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.002-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
 
