@@ -1,16 +1,16 @@
-%global fontname adobe-source-han-sans-cn
+%global fontname adobe-source-han-sans-jp
 %global fontconf 65-0-%{fontname}.conf
 
-%global archivename SourceHanSansCN
+%global archivename SourceHanSansJP
 
-Name:           adobe-source-han-sans-cn-fonts
-Version:        1.004
-Release:        2%{?dist}
-Summary:        Adobe OpenType Pan-CJK font family for Simplified Chinese
+Name:           %{fontname}-fonts
+Version:        1.004R
+Release:        1%{?dist}
+Summary:        Adobe OpenType Pan-CJK font family for Japanese
 
 License:        OFL
 URL:            https://github.com/adobe-fonts/source-han-sans/
-Source0:        https://github.com/adobe-fonts/source-han-sans/raw/release/SubsetOTF/%{archivename}.zip
+Source0:        https://github.com/adobe-fonts/source-han-sans/raw/%{version}/SubsetOTF/%{archivename}.zip
 Source1:        %{name}-fontconfig.conf
 
 BuildArch:      noarch
@@ -24,7 +24,7 @@ Normal, Regular, Medium, Bold, and Heavy—and
 in several OpenType/CFF-based deployment configurations
 to accommodate various system requirements or limitations.
 
-As the name suggests, Pan-CJK fonts are intended to
+As the name suggests, Japanese fonts are intended to
 support the characters necessary to render or
 display text in Simplified Chinese, Traditional Chinese,
 Japanese, and Korean.
